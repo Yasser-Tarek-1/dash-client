@@ -19,14 +19,14 @@ const Footer = () => {
             <img src={link} alt="link" className="w-9" />
           </a>
           <a
-            href="https://github.com/Yasser-Tarek-1"
+            href="https://www.linkedin.com/in/yasser-tarek-32b257242/"
             target="_blank"
             rel="noreferrer"
           >
             <img src={linkedin} alt="linkedin" className="w-9" />
           </a>
           <a
-            href="https://www.linkedin.com/in/yasser-tarek-32b257242/"
+            href="https://github.com/Yasser-Tarek-1 "
             target="_blank"
             rel="noreferrer"
           >

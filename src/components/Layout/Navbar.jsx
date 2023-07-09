@@ -10,7 +10,7 @@ import {
 } from "../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [langShow, setLangShow] = useState(false);
@@ -25,7 +25,7 @@ const Navbar = () => {
     <header>
       <div className="bg-[#131921] min-h-[36px] border-b border-gray-600 text-white tracking-wider flex items-center">
         <div className="container mx-auto px-4 text-xs">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between flex-col gap-1 py-1 md:flex-row">
             <p className="text-center">Free Shipping Over $199.</p>
             <div className="flex items-center relative">
               <p className="text-center">
@@ -66,9 +66,9 @@ const Navbar = () => {
       </div>
       <div className="bg-[#131921] min-h-[64px] border-b border-gray-600 flex items-center">
         <div className="container mx-auto px-4">
-          <div className="flex items-center text-white justify-between">
-            <h1 className="text-3xl font-bold">Dash.</h1>
-            <div className="bg-white rounded-lg w-[600px] flex items-center">
+          <div className="flex items-center text-white justify-between gap-1 flex-col md:flex-row">
+            <h1 className="text-3xl font-bold py-1 md:py-0">Dash.</h1>
+            <div className="bg-white rounded-lg w-full mb-1 md:w-[600px] flex items-center">
               <input
                 className="border-none bg-transparent outline-none text-black w-full block px-4 text-sm"
                 placeholder="Search..."
@@ -80,7 +80,7 @@ const Navbar = () => {
                 />
               </button>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4  py-1 md:py-0">
               <button className="flex items-center text-sm font-[300] gap-1">
                 <img src={cycle} alt="cycle" className="w-12" />
                 <div>
@@ -115,7 +115,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#232f3e] min-h-[36px] border-b border-gray-600 text-white tracking-wider flex items-center">
+      <div className="bg-[#232f3e] min-h-[36px] border-b border-gray-600 text-white tracking-wider flex items-center py-1 md:py-0">
         <div className="container mx-auto px-4 text-xs">
           <div className="flex items-center gap-8">
             <div className="relative flex items-center">
@@ -129,22 +129,36 @@ const Navbar = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu p-2 shadow  rounded-box w-52 bg-gray-600"
+                  className="dropdown-content z-[99] menu p-2 shadow  rounded-box w-52 bg-gray-600"
                 >
+                  <div className="md:hidden">
+                    <li className="hover:bg-yellow-500 rounded-lg transition-all">
+                      <Link to="/home">Home</Link>
+                    </li>
+                    <li className="hover:bg-yellow-500 rounded-lg transition-all">
+                      <Link to="/home">Ouer Store</Link>
+                    </li>
+                    <li className="hover:bg-yellow-500 rounded-lg transition-all">
+                      <Link to="/home">Blogs</Link>
+                    </li>
+                    <li className="hover:bg-yellow-500 rounded-lg transition-all">
+                      <Link to="/home">Contact</Link>
+                    </li>
+                  </div>
                   <li className="hover:bg-yellow-500 rounded-lg transition-all">
-                    <NavLink to="/phones">Action</NavLink>
+                    <Link to="/phones">Action</Link>
                   </li>
                   <li className="hover:bg-yellow-500 rounded-lg transition-all">
-                    <NavLink to="/head">Another Action</NavLink>
+                    <Link to="/head">Another Action</Link>
                   </li>
                   <li className="hover:bg-yellow-500 rounded-lg transition-all">
-                    <NavLink to="/app">Else..</NavLink>
+                    <Link to="/app">Else..</Link>
                   </li>
                 </ul>
               </div>
               <span className="w-[1px] block h-[26px] mx-3 bg-gray-600" />
             </div>
-            <ul className="text-white flex items-center gap-4 text-[14px] uppercase font-[100]">
+            <ul className="text-white  items-center gap-4 text-[14px] uppercase font-[100] hidden md:flex">
               <li className="hover:text-yellow-500">
                 <NavLink
                   className={({ isActive }) => isActive && "text-yellow-500"}

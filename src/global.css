@@ -1,8 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
 
 body {
   font-family: "Rubik", sans-serif;
+}
+
+/* swiper */
+.customSwiper .swiper {
+  /* overflow: none; */
+}
+
+.customSwiper .swiper-button-next {
+  /* top: -50px !important; */
+  /* right: 0; */
+  color: #131921;
+}
+
+.customSwiper .swiper-button-prev {
+  /* top: -50px !important; */
+  /* right: 45px; */
+  left: auto;
+  color: #131921;
+}
+
+/* marquee */
+.marquee .child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  */
+.custom-ellipsis,
+.custom-ellipsis-line {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+.custom-ellipsis {
+  -webkit-line-clamp: 3;
+}
+.custom-ellipsis-line {
+  -webkit-line-clamp: 2;
 }
