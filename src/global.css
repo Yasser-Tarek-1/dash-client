@@ -47,3 +47,12 @@ body {
 .custom-ellipsis-line {
   -webkit-line-clamp: 2;
 }
+
+/* SpecialSec */
+.grid-system {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, 350px);
+  justify-content: center;
+  align-items: center;
+}

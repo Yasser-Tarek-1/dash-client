@@ -3,6 +3,7 @@ import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import router from "./router";
 import store from "./store";
+import "./i18n";
 import "./global.css";
 import "swiper/css";
 import "swiper/css/pagination";

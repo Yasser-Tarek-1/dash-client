@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   arrowTop,
   arrowBottom,
@@ -11,14 +11,26 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { i18n } = useTranslation();
   const [langShow, setLangShow] = useState(false);
-  const [lang, setLang] = useState("En");
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    setLang(i18n.language);
+  }, [i18n.language]);
 
   const langHandler = (lang) => {
-    setLang(lang);
+    i18n.changeLanguage(lang);
     setLangShow(false);
+
+    if (lang == "ar") {
+      document.body.dir = "rtl";
+    } else {
+      document.body.dir = "ltr";
+    }
   };
 
   return (
@@ -36,7 +48,7 @@ const Navbar = () => {
                 className="text-center flex items-center"
                 onClick={() => setLangShow(!langShow)}
               >
-                <span className="w-4">{lang}</span>
+                <span className="w-4 uppercase">{lang.slice(0, 2)}</span>
                 <img
                   src={!langShow ? arrowBottom : arrowTop}
                   alt="arrow"
@@ -46,15 +58,15 @@ const Navbar = () => {
               {langShow && (
                 <div className="flex items-center flex-col gap-1 bg-gray-600 rounded-lg p-2 absolute bottom-[-60px] right-[-4px]">
                   <button
-                    className="text-center px-3"
-                    onClick={() => langHandler("En")}
+                    className="text-center px-3 uppercase"
+                    onClick={() => langHandler("en")}
                   >
                     En
                   </button>
                   <span className="w-[30px] block h-[1px] bg-[#131921]" />
                   <button
-                    className="text-center px-3"
-                    onClick={() => langHandler("Ar")}
+                    className="text-center px-3 uppercase"
+                    onClick={() => langHandler("ar")}
                   >
                     Ar
                   </button>
@@ -133,16 +145,16 @@ const Navbar = () => {
                 >
                   <div className="md:hidden">
                     <li className="hover:bg-yellow-500 rounded-lg transition-all">
-                      <Link to="/home">Home</Link>
+                      <Link to="/">Home</Link>
                     </li>
                     <li className="hover:bg-yellow-500 rounded-lg transition-all">
-                      <Link to="/home">Ouer Store</Link>
+                      <Link to="/store">Ouer Store</Link>
                     </li>
                     <li className="hover:bg-yellow-500 rounded-lg transition-all">
-                      <Link to="/home">Blogs</Link>
+                      <Link to="/blogs">Blogs</Link>
                     </li>
                     <li className="hover:bg-yellow-500 rounded-lg transition-all">
-                      <Link to="/home">Contact</Link>
+                      <Link to="/contact">Contact</Link>
                     </li>
                   </div>
                   <li className="hover:bg-yellow-500 rounded-lg transition-all">

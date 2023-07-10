@@ -9,9 +9,9 @@ import {
   cart2,
 } from "../../assets";
 
-const FeaturedCard = () => {
+const ProductCard = () => {
   return (
-    <button className="h-80 w-[250px] bg-white rounded-lg shadow-lg px-4 py-8 2x relative group">
+    <button className="h-96 w-[250px] bg-white rounded-lg shadow-lg px-4 py-8 2x relative group">
       <div className="absolute flex items-center flex-col right-4 top-4">
         <button className="p-1 rounded-full hover:bg-red-500 transition-all duration-300">
           <img src={heart} className="w-5 object-cover" alt="love" />
@@ -29,7 +29,7 @@ const FeaturedCard = () => {
         </div>
       </div>
       <Link to="/">
-        <div className="h-28">
+        <div className=" h-44">
           <img
             src={ps4}
             className="w-40 max-w-full mx-auto pb-8 group-hover:hidden transition-all duration-300"
@@ -84,4 +84,4 @@ const FeaturedCard = () => {
   );
 };
 
-export default FeaturedCard;
+export default ProductCard;

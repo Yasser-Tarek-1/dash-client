@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-import FeaturedCard from "./FeaturedCard";
+import ProductCard from "./ProductCard";
 
 const FEATURED = [
   { id: "1" },
@@ -48,7 +48,7 @@ const Featured = () => {
             {FEATURED.map((col, idx) => {
               return (
                 <SwiperSlide key={idx} virtualIndex={idx}>
-                  <FeaturedCard />
+                  <ProductCard />
                 </SwiperSlide>
               );
             })}
