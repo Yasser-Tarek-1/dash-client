@@ -42,6 +42,16 @@ import shuffle from "./shuffle.svg";
 import show from "./show.svg";
 import cart2 from "./cart-2.svg";
 
+import row1 from "./row-1.svg";
+import row2 from "./rwo-2.svg";
+import row3 from "./row-3.svg";
+
+import menu from "./menu.svg";
+
+import zoom_in from "./zoom_in.svg";
+
+import payment_methods from "./payment-methods.png";
+
 export {
   arrowTop,
   arrowBottom,
@@ -83,4 +93,10 @@ export {
   shuffle,
   show,
   cart2,
+  row1,
+  row2,
+  row3,
+  menu,
+  zoom_in,
+  payment_methods,
 };

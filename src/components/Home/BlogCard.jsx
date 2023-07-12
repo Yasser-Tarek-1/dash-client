@@ -18,7 +18,7 @@ const BlogCard = ({ img, date, title, des, link = "/" }) => {
           whose shoes does he choose?`}
         </p>
         <button className="btn text-sm text-[#131921] hover:bg-yellow-500 bg-yellow-400">
-          <Link to={link}>Read more</Link>
+          <Link to={"/blog/1"}>Read more</Link>
         </button>
       </div>
     </div>

@@ -93,36 +93,44 @@ const Navbar = () => {
               </button>
             </div>
             <div className="flex items-center gap-4  py-1 md:py-0">
-              <button className="flex items-center text-sm font-[300] gap-1">
-                <img src={cycle} alt="cycle" className="w-12" />
-                <div>
-                  <span>Compare</span>
-                  <br /> <span>Products</span>
-                </div>
-              </button>
-              <button className="flex items-center text-sm font-[300] gap-1">
-                <img src={favorite} alt="favorite" className="w-12" />
-                <div>
-                  <span>Favorite</span>
-                  <br /> <span>Wishlist</span>
-                </div>
-              </button>
-              <button className="flex items-center text-sm font-[300] gap-1">
-                <img src={person} alt="person" className="w-12" />
-                <div>
-                  <span>Login</span>
-                  <br /> <span>Myaccount</span>
-                </div>
-              </button>
-              <button className="flex items-center text-sm font-[300] gap-1">
-                <img src={cart} alt="cart" className="w-12" />
-                <div>
-                  <span className="badge bg-yellow-400 border-none text-[#131921]">
-                    0
-                  </span>
-                  <br /> <span>$0.00</span>
-                </div>
-              </button>
+              <Link to="/compare-product">
+                <button className="flex items-center text-sm font-[300] gap-1">
+                  <img src={cycle} alt="cycle" className="w-12" />
+                  <div>
+                    <span>Compare</span>
+                    <br /> <span>Products</span>
+                  </div>
+                </button>
+              </Link>
+              <Link to="/favorite">
+                <button className="flex items-center text-sm font-[300] gap-1">
+                  <img src={favorite} alt="favorite" className="w-12" />
+                  <div>
+                    <span>Favorite</span>
+                    <br /> <span>Wishlist</span>
+                  </div>
+                </button>
+              </Link>
+              <Link to="/login">
+                <button className="flex items-center text-sm font-[300] gap-1">
+                  <img src={person} alt="person" className="w-12" />
+                  <div>
+                    <span>Login</span>
+                    <br /> <span>Myaccount</span>
+                  </div>
+                </button>
+              </Link>
+              <Link to="/cart">
+                <button className="flex items-center text-sm font-[300] gap-1">
+                  <img src={cart} alt="cart" className="w-12" />
+                  <div>
+                    <span className="badge bg-yellow-400 border-none text-[#131921]">
+                      0
+                    </span>
+                    <br /> <span>$0.00</span>
+                  </div>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

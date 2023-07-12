@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  position: relative;
+}
 body {
   font-family: "Rubik", sans-serif;
 }

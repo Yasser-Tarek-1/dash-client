@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { headphone, ps4, speaker } from "../../assets";
 
-import ProductCard from "./ProductCard";
+import ProductCard from "../General/ProductCard";
 
 const POPULAR = [
   { id: "1" },

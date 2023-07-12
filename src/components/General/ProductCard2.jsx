@@ -1,22 +1,14 @@
 import { Link } from "react-router-dom";
-import {
-  ps4,
-  home,
-  heart,
-  heart_red,
-  show,
-  shuffle,
-  cart2,
-} from "../../assets";
+import { ps4, heart, heart_red, show, shuffle, cart2 } from "../../assets";
 
-const ProductCard = () => {
+const ProductCard2 = () => {
   return (
-    <button className="h-96 w-[250px] bg-white rounded-lg shadow-lg px-4 py-8 2x relative group">
-      <div className="absolute flex items-center flex-col right-4 top-4">
+    <button className="w-full bg-white rounded-lg shadow-lg px-4 py-8 2x relative group">
+      <div className="absolute flex items-center flex-row-reverse right-4 top-4">
         <button className="p-1 rounded-full hover:bg-red-500 transition-all duration-300">
           <img src={heart} className="w-5 object-cover" alt="love" />
         </button>
-        <div className=" items-center flex-col hidden group-hover:flex transition-all duration-300">
+        <div className=" items-center flex-row-reverse hidden group-hover:flex transition-all duration-300">
           <button className="p-1 rounded-full hover:bg-yellow-500 transition-all duration-300">
             <img src={shuffle} className="w-5 object-cover" alt="shuffle" />
           </button>
@@ -28,16 +20,9 @@ const ProductCard = () => {
           </button>
         </div>
       </div>
-      <Link to="/">
-        <div className=" h-44">
-          <img
-            src={ps4}
-            className="w-40 max-w-full mx-auto pb-8 group-hover:hidden transition-all duration-300"
-          />
-          <img
-            src={home}
-            className="w-20 max-w-full  mx-auto pb-8 hidden group-hover:block transition-all duration-300"
-          />
+      <Link to="/product/12" className="flex items-start justify-start">
+        <div>
+          <img src={ps4} className="w-40 max-w-full mx-auto pb-8 " />
         </div>
         <div className="flex items-start flex-col gap-3">
           <span className="text-yellow-700 text-xs">Sony</span>
@@ -50,31 +35,26 @@ const ProductCard = () => {
               type="radio"
               name="rating-2"
               className="mask mask-star-2 bg-orange-400 "
-              checked
             />
             <input
               type="radio"
               name="rating-2"
               className="mask mask-star-2 bg-orange-400"
-              checked
             />
             <input
               type="radio"
               name="rating-2"
               className="mask mask-star-2 bg-orange-400"
-              checked
             />
             <input
               type="radio"
               name="rating-2"
               className="mask mask-star-2 bg-orange-400"
-              checked
             />
             <input
               type="radio"
               name="rating-2"
               className="mask mask-star-2 bg-orange-400"
-              checked
             />
           </div>
           <p className="text-sm text-gray-700">$99.90</p>
@@ -84,4 +64,4 @@ const ProductCard = () => {
   );
 };
 
-export default ProductCard;
+export default ProductCard2;
