@@ -1,8 +1,7 @@
-import { useState } from "react";
 import Categories from "./Categories";
 import Filter from "./Filter";
 
-const Left = ({ show, onSetShow }) => {
+const FilterWrraper = ({ show, onSetShow }) => {
   return (
     <>
       <div
@@ -19,4 +18,4 @@ const Left = ({ show, onSetShow }) => {
   );
 };
 
-export default Left;
+export default FilterWrraper;

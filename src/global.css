@@ -4,38 +4,36 @@
 @tailwind utilities;
 
 #root {
-  position: relative;
+  @apply relative;
 }
+
+html {
+  @apply scroll-smooth;
+}
+
 body {
   font-family: "Rubik", sans-serif;
 }
 
 /* swiper */
-.customSwiper .swiper {
-  /* overflow: none; */
+.swiper-pagination-bullet {
+  @apply bg-yellow-400 !important;
 }
 
 .customSwiper .swiper-button-next {
-  /* top: -50px !important; */
-  /* right: 0; */
-  color: #131921;
+  @apply text-[#131921] !important;
 }
 
 .customSwiper .swiper-button-prev {
-  /* top: -50px !important; */
-  /* right: 45px; */
-  left: auto;
-  color: #131921;
+  @apply text-[#131921] !important;
 }
 
 /* marquee */
 .marquee .child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @apply flex items-center justify-center;
 }
 
-/*  */
+/* Ellipsis */
 .custom-ellipsis,
 .custom-ellipsis-line {
   text-overflow: ellipsis;
@@ -58,4 +56,22 @@ body {
   grid-template-columns: repeat(auto-fill, 350px);
   justify-content: center;
   align-items: center;
+}
+
+/* Pagination */
+#container ul {
+  @apply w-full flex items-end justify-end gap-4;
+}
+
+#container ul li {
+  @apply w-8 h-8 flex items-center justify-center rounded-full;
+}
+
+#container ul .selected {
+  @apply bg-yellow-300;
+}
+
+#container ul li.next,
+#container ul li.previous {
+  @apply font-semibold text-2xl;
 }

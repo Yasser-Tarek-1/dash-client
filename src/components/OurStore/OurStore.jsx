@@ -1,9 +1,9 @@
-import Right from "./Right/Right";
-import Left from "./Left/Left";
+import Products from "./Products/Products";
+import FilterWrraper from "./Filter/FilterWrraper";
 import { useState } from "react";
 import { menu } from "../../assets";
 
-const Wrapper = () => {
+const OurStore = () => {
   // show store side nav  in mobile view
   const [show, setShow] = useState(false);
 
@@ -18,12 +18,12 @@ const Wrapper = () => {
           <img src={menu} alt="menu" className="w-7" />
         </button>
         <div className="flex items-start gap-4">
-          <Left show={show} onSetShow={setShow} />
-          <Right onSetShow={setShow} />
+          <FilterWrraper show={show} onSetShow={setShow} />
+          <Products onSetShow={setShow} />
         </div>
       </div>
     </section>
   );
 };
 
-export default Wrapper;
+export default OurStore;

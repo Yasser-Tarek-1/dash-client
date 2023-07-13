@@ -1,13 +1,19 @@
-import { link, linkedin, github } from "../../assets";
+import { link, linkedin, github } from "../assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-main rounded bg-[#131921] text-white">
       <div className="grid grid-flow-col gap-4">
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Blogs</a>
-        <a className="link link-hover">Store</a>
+        <Link to="/contact" className="link link-hover">
+          Contact
+        </Link>
+        <Link to="/blogs" className="link link-hover">
+          Blogs
+        </Link>
+        <Link to="/store" className="link link-hover">
+          Store
+        </Link>
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">

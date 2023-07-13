@@ -2,7 +2,6 @@ import { useLocation } from "react-router-dom";
 
 const Categories = ({ onSetShow }) => {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <div className="py-4 px-6 rounded-lg bg-white w-full">
       <div className="flex items-center justify-between">

@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import BlogCard from "../components/Home/BlogCard";
-import BreadCrumb from "../components/Layout/BreadCrumb";
-import Meta from "../components/Layout/Meta";
-import Categories from "../components/OurStore/Left/Categories";
+import BreadCrumb from "../Layouts/BreadCrumb";
+import Meta from "../Layouts/Meta";
+import Categories from "../components/OurStore/Filter/Categories";
 import SingleBlog from "../components/Blog/SingleBlog";
 
 // same page for Blogs and Blog Deatails

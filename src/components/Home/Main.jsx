@@ -32,8 +32,10 @@ const Main = () => {
                   <br />
                   Overcoat
                 </div>
-                <button className="border border-white py-3 px-9 shadow-lg hover:bg-white hover:text-black transition-all">
-                  Shop Now
+                <button className="border border-white  shadow-lg hover:bg-white hover:text-black transition-all">
+                  <a href="#featured" className="block w-full py-3 px-9">
+                    Shop Now
+                  </a>
                 </button>
               </div>
             </div>
@@ -47,8 +49,13 @@ const Main = () => {
                   <br />
                   Overcoat
                 </div>
-                <button className="border border-white py-2 px-6 md:py-3 md:px-9 shadow-lg hover:bg-white hover:text-black transition-all">
-                  Shop Now
+                <button className="border border-white  shadow-lg hover:bg-white hover:text-black transition-all">
+                  <a
+                    href="#featured"
+                    className="block w-full py-2 px-6 md:py-3 md:px-9"
+                  >
+                    Shop Now
+                  </a>
                 </button>
               </div>
             </div>
@@ -64,8 +71,10 @@ const Main = () => {
                   <br />
                   Overcoat
                 </div>
-                <button className="border border-white py-3 px-9 shadow-lg hover:bg-white hover:text-black transition-all">
-                  Shop Now
+                <button className="border border-white  shadow-lg hover:bg-white hover:text-black transition-all">
+                  <a href="#featured" className="block w-full py-3 px-9">
+                    Shop Now
+                  </a>
                 </button>
               </div>
             </div>
@@ -79,8 +88,13 @@ const Main = () => {
                   <br />
                   Overcoat
                 </div>
-                <button className="border border-white py-2 px-6 md:py-3 md:px-9 shadow-lg hover:bg-white hover:text-black transition-all">
-                  Shop Now
+                <button className="border border-white  shadow-lg hover:bg-white hover:text-black transition-all">
+                  <a
+                    href="#featured"
+                    className="block w-full py-2 px-6 md:py-3 md:px-9"
+                  >
+                    Shop Now
+                  </a>
                 </button>
               </div>
             </div>

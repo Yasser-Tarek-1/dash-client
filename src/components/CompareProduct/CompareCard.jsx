@@ -30,7 +30,7 @@ const CompareCardSections = [
 
 const CompareCard = () => {
   return (
-    <div className=" w-[250px] bg-white rounded-lg shadow-lg px-4 py-8 2x relative group">
+    <div className="w-[250px] bg-white rounded-lg shadow-lg px-4 py-8 2x relative group">
       <div className="absolute flex items-center flex-col right-4 top-4">
         <button className="w-7 h-7 rounded-full hover:bg-red-500 transition-all duration-300">
           X

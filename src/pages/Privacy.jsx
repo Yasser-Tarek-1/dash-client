@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import BreadCrumb from "../components/Layout/BreadCrumb";
-import Meta from "../components/Layout/Meta";
+import BreadCrumb from "../Layouts/BreadCrumb";
+import Meta from "../Layouts/Meta";
 
 const Privacy = () => {
   return (

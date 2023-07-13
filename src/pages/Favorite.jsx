@@ -1,6 +1,6 @@
-import ProductCard from "../components/General/ProductCard";
-import BreadCrumb from "../components/Layout/BreadCrumb";
-import Meta from "../components/Layout/Meta";
+import ProductCard from "../Layouts/ProductCard";
+import BreadCrumb from "../Layouts/BreadCrumb";
+import Meta from "../Layouts/Meta";
 
 const Favorite = () => {
   return (
@@ -10,8 +10,7 @@ const Favorite = () => {
       <section className="w-full h-full mt-4 py-8 bg-[#f5f5f7]">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
-            <ProductCard /> <ProductCard />
-            <ProductCard />
+            <ProductCard howShow="favorite" />
           </div>
         </div>
       </section>

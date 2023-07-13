@@ -1,15 +1,23 @@
-import Rating from "../Layout/Rating";
+import ReactStars from "react-stars";
 import { payment_methods } from "../../assets";
+import Button from "../../Layouts/Button";
 
 const Details = ({ CompareCardSections }) => {
   return (
     <div className="flex-1 flex items-start gap-1 flex-col">
       <h3 className="text-lg font-[500]">Kids PS4 Bulk 10 Colred</h3>
       <hr className="w-full h-1" />
-      <div className="flex-1 flex items-start gap-1 flex-col">
+      <div className="flex-1 flex items-start gap-2 flex-col">
         <h4 className="text-base font-[500]">$100.00</h4>
         <div className="flex items-center gap-2 text-xs">
-          <Rating /> (2 reviews)
+          <ReactStars
+            count={5}
+            edit={false}
+            size={24}
+            activeColor="#ffd700"
+            value={4}
+          />
+          (2 reviews)
         </div>
         <button className="text-xs text-gray-500">Write Reviews</button>
       </div>
@@ -75,7 +83,7 @@ const Details = ({ CompareCardSections }) => {
           );
         })}
       </div>
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex items-center justify-between gap-4 w-full">
         <span className="text-base font-[500] capitalize">Quantity:</span>
         <p className="flex items-center">
           <span className="w-10 h-12 border flex items-center justify-center">
@@ -90,20 +98,12 @@ const Details = ({ CompareCardSections }) => {
             </button>
           </div>
         </p>
-        <button className="btn bg-yellow-300 hover:bg-yellow-400">
-          Add to cart
-        </button>
-        <button className="btn border-2 bg-white border-yellow-300 hover:bg-yellow-400 hover:border-yellow-400">
-          Buy it now
-        </button>
+        <Button>Add to cart</Button>
+        <Button>Buy it now</Button>
       </div>
       <div className="flex items-center gap-4 mt-2">
-        <button className="p-2 rounded-lg bg-red-400 text-white border flex items-center justify-center">
-          Add to favorite
-        </button>
-        <button className="p-2 rounded-lg bg-yellow-400 text-white border flex items-center justify-center">
-          Add to compare
-        </button>
+        <Button>favorite</Button>
+        <Button>compare</Button>
       </div>
       <hr className="w-full h-1 mt-2" />
       <div className="bg-[#f5f5f7] p-2 w-full flex flex-col items-center ">

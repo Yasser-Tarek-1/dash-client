@@ -1,4 +1,4 @@
-import { row2, row3 } from "../../../assets";
+import { column, row } from "../../../assets";
 
 const SortNav = ({ onRowHandler, productShow }) => {
   return (
@@ -11,22 +11,22 @@ const SortNav = ({ onRowHandler, productShow }) => {
           </div>
           <div className="flex items-center gap-1">
             <button
-              data-id="row2"
+              data-id="column"
               onClick={(e) => onRowHandler(e)}
               className={`p-1 rounded-lg ${
-                productShow == "row2" && "bg-yellow-400 "
+                productShow == "column" && "bg-yellow-300 "
               }`}
             >
-              <img data-id="row2" src={row2} className="w-6" />
+              <img data-id="column" src={column} className="w-6" />
             </button>
             <button
-              data-id="row3"
+              data-id="row"
               onClick={(e) => onRowHandler(e)}
               className={`p-1 rounded-lg ${
-                productShow == "row3" && "bg-yellow-400 "
+                productShow == "row" && "bg-yellow-300 "
               }`}
             >
-              <img data-id="row3" src={row3} className="w-6" />
+              <img data-id="row" src={row} className="w-6" />
             </button>
           </div>
         </div>

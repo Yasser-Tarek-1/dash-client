@@ -1,8 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Footer from "./components/Layout/Footer";
-
-import Navbar from "./components/Layout/Navbar";
-import { Suspense } from "react";
+import Footer from "./Layouts/Footer";
+import Navbar from "./Layouts/Navbar";
 
 const Root = () => {
   return (
@@ -14,12 +12,4 @@ const Root = () => {
   );
 };
 
-const WrappedRoot = () => {
-  return (
-    <Suspense fallback="loading...">
-      <Root />
-    </Suspense>
-  );
-};
-
-export default WrappedRoot;
+export default Root;

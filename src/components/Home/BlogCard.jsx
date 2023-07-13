@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { mainBanner1 } from "../../assets";
+import Button from "../../Layouts/Button";
 
 const BlogCard = ({ img, date, title, des, link = "/" }) => {
   return (
@@ -17,9 +18,7 @@ const BlogCard = ({ img, date, title, des, link = "/" }) => {
             `If a dog chews shoes whose shoes does he choose, If a dog chews shoes
           whose shoes does he choose?`}
         </p>
-        <button className="btn text-sm text-[#131921] hover:bg-yellow-500 bg-yellow-400">
-          <Link to={"/blog/1"}>Read more</Link>
-        </button>
+        <Button.Link to="/blog/1">Read more</Button.Link>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import Main from "../components/Home/Main";
 import MrqueeSec from "../components/Home/MrqueeSec";
 import SpecialSec from "../components/Home/SpecialSec";
 import Popular from "../components/Home/PopularSec";
-import Meta from "../components/Layout/Meta";
+import Meta from "../Layouts/Meta";
 
 const Home = () => {
   return (

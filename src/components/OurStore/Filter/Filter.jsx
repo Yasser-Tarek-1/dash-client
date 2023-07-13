@@ -1,3 +1,6 @@
+import CheckBox from "../../../Layouts/CheckBox";
+import Form from "../../../Layouts/Form";
+
 const CHEACK_BOX = [
   {
     name: "instock",
@@ -200,39 +203,15 @@ const Filter = () => {
       <div className="mt-6 flex items-start gap-3 flex-col">
         <h4 className="text-sm font-[500]">Availability</h4>
         {CHEACK_BOX.map(({ name, count, type }, idx) => (
-          <div className="cursor-pointer flex gap-2" key={idx}>
-            <input
-              type="checkbox"
-              id={name}
-              className="cursor-pointer"
-              name={name}
-            />
-            <label className="text-sm cursor-pointer" htmlFor={name}>
-              {type} <span>({count})</span>
-            </label>
-          </div>
+          <CheckBox key={idx} label={`${type} (${count})`} id={name} />
         ))}
       </div>
       {/* Price */}
       <div className="mt-6 flex items-start gap-3 flex-col">
         <h4 className="text-sm font-[500]">Price</h4>
         <div className="flex items-center justify-between w-full gap-2">
-          <div className="w-[45%] flex items-center gap-1">
-            <label className="text-sm text-gray-600">$</label>
-            <input
-              type="text"
-              className="w-[100%] bg-gray-200 rounded-lg outline-none px-4 text-sm py-1"
-              placeholder="From"
-            />
-          </div>
-          <div className="w-[45%] flex items-center gap-1">
-            <label className="text-sm text-gray-600">$</label>
-            <input
-              type="text"
-              className="w-[100%] bg-gray-200 rounded-lg outline-none px-4 text-sm py-1"
-              placeholder="To"
-            />
-          </div>
+          <Form.Control placeholder="$" />
+          <Form.Control placeholder="$" />
         </div>
       </div>
       {/* Color */}
@@ -240,7 +219,6 @@ const Filter = () => {
         <h4 className="text-sm font-[500]">Color</h4>
         <div className="flex items-center w-full gap-2 flex-wrap px-6">
           {COLORS.map(({ hex }, idx) => {
-            console.log(hex);
             return (
               <button
                 key={idx}
@@ -255,17 +233,7 @@ const Filter = () => {
       <div className="mt-6 flex items-start gap-3 flex-col">
         <h4 className="text-sm font-[500]">Size</h4>
         {SIZE.map(({ count, size }, idx) => (
-          <div className="cursor-pointer flex gap-2" key={idx}>
-            <input
-              type="checkbox"
-              id={size}
-              className="cursor-pointer"
-              name={size}
-            />
-            <label className="text-sm cursor-pointer uppercase" htmlFor={size}>
-              {size} <span>({count})</span>
-            </label>
-          </div>
+          <CheckBox key={idx} label={`${size} (${count})`} id={size} />
         ))}
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-import ProductCard from "../General/ProductCard";
+import ProductCard from "../../Layouts/ProductCard";
 
 const FEATURED = [
   { id: "1" },
@@ -18,7 +18,7 @@ const FEATURED = [
 
 const Featured = () => {
   return (
-    <section className="w-full h-full py-8">
+    <section id="featured" className="w-full h-full py-8">
       <div className="container mx-auto px-4">
         <h3 className="text-3xl font-semibold">Featured Collection</h3>
         <div className="my-12">

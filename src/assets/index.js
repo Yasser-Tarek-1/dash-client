@@ -29,12 +29,6 @@ import headphone from "./headphone.webp";
 import airbods from "./airbods.png";
 import speaker from "./speaker.webp";
 import home from "./home.webp";
-import dell from "./dell.png";
-import boeing from "./boeing.png";
-import cisco from "./cisco.png";
-import bbc from "./bbc.png";
-import iti from "./iti.png";
-import ibm from "./ibm.png";
 
 import heart from "./heart.svg";
 import heart_red from "./heart-red.svg";
@@ -42,9 +36,8 @@ import shuffle from "./shuffle.svg";
 import show from "./show.svg";
 import cart2 from "./cart-2.svg";
 
-import row1 from "./row-1.svg";
-import row2 from "./rwo-2.svg";
-import row3 from "./row-3.svg";
+import column from "./rwo-2.svg";
+import row from "./row-3.svg";
 
 import menu from "./menu.svg";
 
@@ -82,20 +75,13 @@ export {
   airbods,
   speaker,
   home,
-  dell,
-  ibm,
-  boeing,
-  cisco,
-  bbc,
-  iti,
   heart,
   heart_red,
   shuffle,
   show,
   cart2,
-  row1,
-  row2,
-  row3,
+  column,
+  row,
   menu,
   zoom_in,
   payment_methods,

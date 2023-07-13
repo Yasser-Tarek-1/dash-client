@@ -1,5 +1,6 @@
-import BreadCrumb from "../components/Layout/BreadCrumb";
-import Meta from "../components/Layout/Meta";
+import BreadCrumb from "../Layouts/BreadCrumb";
+import Button from "../Layouts/Button";
+import Meta from "../Layouts/Meta";
 
 import { ps4 } from "../assets";
 import { Link } from "react-router-dom";
@@ -51,17 +52,15 @@ const Cart = () => {
               </tbody>
             </table>
             <div className="flex items-center gap-1 justify-between">
-              <button className="btn bg-yellow-300">
-                <Link to="/store">Continue Shopping</Link>
-              </button>
-              <div className="flex flex-col">
+              <div className="w-36">
+                <Button.Link to="/store">Keep Shopping</Button.Link>
+              </div>
+              <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-3">
                   <span className="text-xl font-[500]">Subtotal:</span>
                   <span>$2999</span>
                 </div>
-                <button className="btn bg-yellow-300">
-                  <Link to="/checkout">Checkout</Link>
-                </button>
+                <Button.Link to="/checkout">Checkout</Button.Link>
               </div>
             </div>
           </div>

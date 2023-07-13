@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { heart, cam } from "../../assets";
+import ReactStars from "react-stars";
+import Button from "../../Layouts/Button";
 
 const SpecialCard = () => {
   return (
@@ -32,33 +34,13 @@ const SpecialCard = () => {
             If a dog chews shoes whose shoes does he choose, If a dog chews
             shoes whose shoes does he choose?
           </p>
-          <div className="rating w-20">
-            <input
-              type="radio"
-              name="rating-2"
-              className="mask mask-star-2 bg-orange-400 "
-            />
-            <input
-              type="radio"
-              name="rating-2"
-              className="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-2"
-              className="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-2"
-              className="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-2"
-              className="mask mask-star-2 bg-orange-400"
-            />
-          </div>
+          <ReactStars
+            count={5}
+            edit={false}
+            size={24}
+            activeColor="#ffd700"
+            value={4}
+          />
           <p className="text-sm text-gray-700">$99.90</p>
         </div>
         <div className="flex items-center gap-2">
@@ -84,10 +66,8 @@ const SpecialCard = () => {
         <div className="w-full h-[3px] relative">
           <span className="w-full h-full block bg-gray-300 rounded-full"></span>
           <span className="w-1/3 h-full block bg-green-600 rounded-full absolute left-0 top-0"></span>
-        </div>{" "}
-        <button className="text-sm text-[#131921] hover:bg-yellow-500 bg-yellow-400 py-2 rounded-full px-4 uppercase font-[500]">
-          <Link to={"/"}>Option</Link>
-        </button>
+        </div>
+        <Button.Link to="/product/1">Option</Button.Link>
       </div>
     </div>
   );

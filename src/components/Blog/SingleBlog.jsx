@@ -1,3 +1,5 @@
+import Button from "../../Layouts/Button";
+import Form from "../../Layouts/Form";
 import { mainBanner1 } from "../../assets";
 
 const SingleBlog = ({ id }) => {
@@ -28,58 +30,36 @@ const SingleBlog = ({ id }) => {
       </div>
       <div className="p-4 rounded-lg bg-white shadow-lg">
         <h3 className="mb-6 text-xl font-[500]">Leave Commint</h3>
-        <htmlForm>
-          <div className="flex items-center gap-8 mb-4">
-            <div className="w-full">
-              <label
-                htmlFor="name"
-                className="block mb-2  text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Name
-              </label>
-              <input
-                type="name"
-                id="name"
-                className="bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-400 dark:focus:border-yellow-400"
-                placeholder="john.doe@company.com"
-              />
-            </div>
-            <div className="w-full">
-              <label
-                htmlFor="email"
-                className="block mb-2  text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-400 dark:focus:border-yellow-400"
-                placeholder="john.doe@company.com"
-              />
-            </div>
-          </div>
-          <div className="mb-4">
-            <label
+        <Form>
+          <div className="flex items-center gap-6">
+            <Form.Control
+              htmlFor="name"
+              label="Name"
+              id="name"
+              name="name"
+              placeholder="John"
+            />
+            <Form.Control
               htmlFor="email"
-              className="block mb-2  text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Your Commint
-            </label>
-            <textarea
-              type="commint"
-              id="commint"
-              className="bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-400 dark:focus:border-yellow-400"
+              label="Email address"
+              id="email"
+              name="email"
               placeholder="john.doe@company.com"
             />
           </div>
-          <button
-            type="submit"
-            className="block w-full text-white bg-yellow-400 hover:bg-yellow-500  font-medium rounded-lg text-sm  px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-400 "
-          >
-            Commint
-          </button>
-        </htmlForm>
+          <div className="w-full h-full flex items-start gap-2 flex-col capitalize my-2">
+            <label htmlFor="commint" className="text-sm font-medium">
+              Your Commint
+            </label>
+            <textarea
+              type="text"
+              id="commint"
+              className={`border w-full rounded-lg outline-none text-sm focus:ring-yellow-400 focus:border-yellow-400 block`}
+              placeholder="Your Commint"
+            />
+          </div>
+          <Button>Send</Button>
+        </Form>
       </div>
     </div>
   );

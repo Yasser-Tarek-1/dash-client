@@ -7,7 +7,7 @@ import {
   favorite,
   cart,
   category,
-} from "../../assets";
+} from "../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
@@ -79,7 +79,9 @@ const Navbar = () => {
       <div className="bg-[#131921] min-h-[64px] border-b border-gray-600 flex items-center">
         <div className="container mx-auto px-4">
           <div className="flex items-center text-white justify-between gap-1 flex-col md:flex-row">
-            <h1 className="text-3xl font-bold py-1 md:py-0">Dash.</h1>
+            <h1 className="text-3xl font-bold py-1 md:py-0">
+              <Link to="/">Dash.</Link>
+            </h1>
             <div className="bg-white rounded-lg w-full mb-1 md:w-[600px] flex items-center">
               <input
                 className="border-none bg-transparent outline-none text-black w-full block px-4 text-sm"
@@ -147,7 +149,7 @@ const Navbar = () => {
                   <img src={category} alt="category" className="w-9" />
                   <span className="mb-[-3px]">Shop Categories</span>
                 </label>
-                <ul
+                {/* <ul
                   tabIndex={0}
                   className="dropdown-content z-[99] menu p-2 shadow  rounded-box w-52 bg-gray-600"
                 >
@@ -174,7 +176,7 @@ const Navbar = () => {
                   <li className="hover:bg-yellow-500 rounded-lg transition-all">
                     <Link to="/app">Else..</Link>
                   </li>
-                </ul>
+                </ul> */}
               </div>
               <span className="w-[1px] block h-[26px] mx-3 bg-gray-600" />
             </div>
